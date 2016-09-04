@@ -3,13 +3,17 @@
 <head>
 	<title>Grid</title>
 	<link rel="stylesheet" href="src/grid.css">
+	<style>
+	body {
+		background: #fafafa;
+	}
+	</style>
 </head>
 <body>
-
 <grid spaced>
 	<grid-group>
-		<grid-unit take="3/4" take-sm="1/1" take-md="1/2">Unit 1</grid-unit>
-		<grid-unit take="1/4" take-sm="1/1" take-md="1/2">Unit 2</grid-unit>
+		<grid-unit take="3/4" sm-take="1/1" md-take="1/2">Unit 1</grid-unit>
+		<grid-unit take="1/4" sm-take="1/1" md-take="1/2">Unit 2</grid-unit>
 	</grid-group>
 	<grid-group>
 		<grid-unit take="1/2">Unit 1</grid-unit>

@@ -3,7 +3,7 @@
 	    @for $j from 1 through $i {
 		    $width: percentage($j / $i);
 
-		     grid-unit[take#{$prefix}="#{$j}/#{$i}"], [grid-unit][take#{$prefix}="#{$j}/#{$i}"] {
+		     grid-unit[#{$prefix}take="#{$j}/#{$i}"], [grid-unit][#{$prefix}take="#{$j}/#{$i}"] {
 		     	flex-basis: $width;
 		     }
 		}
@@ -39,11 +39,11 @@ grid-group { @include grid(""); }
 
 // Small Grid
 @media (max-width: $small-breakpoint + "px") {
-	grid-group { @include grid("-sm"); }
+	grid-group { @include grid("sm-"); }
 }
 
 // Medium Grid
 @media (min-width: $small-breakpoint + 1 + "px") and (max-width: $medium-breakpoint + "px") {
-	grid-group { @include grid("-md"); }
+	grid-group { @include grid("md-"); }
 }
 
