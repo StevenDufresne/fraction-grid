@@ -3,7 +3,7 @@
 	    @for $j from 1 through $i {
 		    $width: percentage($j / $i);
 
-		     grid-unit[take#{$prefix}="#{$j}/#{$i}"], [grid-unit][take#{$prefix}="#{$i}/#{$j}"] {
+		     grid-unit[take#{$prefix}="#{$j}/#{$i}"], [grid-unit][take#{$prefix}="#{$j}/#{$i}"] {
 		     	flex-basis: $width;
 		     }
 		}
