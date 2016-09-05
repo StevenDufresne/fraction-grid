@@ -1,5 +1,8 @@
 $small-breakpoint:	400;
 $medium-breakpoint: 800;
+$container-tag: box;
+$wrapper-tag: row;
+$content-tag: unit;
 
 @import "grid", "spacing";
 

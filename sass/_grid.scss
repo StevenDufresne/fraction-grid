@@ -3,15 +3,19 @@
 	    @for $j from 1 through $i {
 		    $width: percentage($j / $i);
 
-		     grid-unit[#{$prefix}take="#{$j}/#{$i}"], [grid-unit][#{$prefix}take="#{$j}/#{$i}"] {
-		     	flex-basis: $width;
+		    #{$wrapper-tag}[#{$prefix}take="#{$j}/#{$i}"], 
+		    [#{$wrapper-tag}][#{$prefix}take="#{$j}/#{$i}"],
+		    #{$wrapper-tag} #{$content-tag}[#{$prefix}take="#{$j}/#{$i}"], 
+		    [#{$wrapper-tag}][#{$content-tag}][#{$prefix}take="#{$j}/#{$i}"] {
+		     	width: $width;
 		     }
 		}
 	}
-
 }
 
-grid-group, [grid-group] {
+#{$container-tag}, [#{$container-tag}] { display: block; }
+
+#{$container-tag} #{$wrapper-tag}, [#{$container-tag}][#{$wrapper-tag}] {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -23,27 +27,24 @@ grid-group, [grid-group] {
 	display: flex;
 
 	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 	justify-content: space-around;
 }
 
-grid, [grid] {
-	display: block;
-}
-
-grid-unit, [grid-unit] {
+#{$wrapper-tag} #{$content-tag}, [#{$wrapper-tag}][#{$content-tag}] {
 	display: flex;	
 }
 
 // Default Layout
-grid-group { @include grid(""); }
+@include grid("");
 
 // Small Grid
 @media (max-width: $small-breakpoint + "px") {
-	grid-group { @include grid("sm-"); }
+	@include grid("sm-");
 }
 
 // Medium Grid
 @media (min-width: $small-breakpoint + 1 + "px") and (max-width: $medium-breakpoint + "px") {
-	grid-group { @include grid("md-"); }
+	@include grid("md-");
 }
 

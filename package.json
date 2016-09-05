@@ -1,0 +1,31 @@
+{
+  "name": "fraction-grid",
+  "version": "1.0.0",
+  "description": "A more semantic, back-end developer friendly css grid leading with the idea that layout and style should read separately.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenDufresne/fraction-grid.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "flexbox",
+    "web",
+    "components"
+  ],
+  "author": "Steve Dufresne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenDufresne/fraction-grid/issues"
+  },
+  "homepage": "https://github.com/StevenDufresne/fraction-grid#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
