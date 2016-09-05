@@ -4,10 +4,10 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-		            style: 'compressed',
-		            sourcemap: 'none',
-		            noCache: true
-		        },
+					style: 'compressed',
+					sourcemap: 'none',
+					noCache: true
+				},
 				files: {
 					'src/fraction-grid.css' : 'sass/main.scss'
 				}
