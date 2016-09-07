@@ -48,3 +48,9 @@
 	@include grid("md-");
 }
 
+// Large Grid
+@media (min-width: $medium-breakpoint + 1 + "px") {
+	@include grid("lg-");
+}
+
+

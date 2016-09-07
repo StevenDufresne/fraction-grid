@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 					noCache: true
 				},
 				files: {
-					'src/fraction-grid.css' : 'sass/main.scss'
+					'src/fraction-grid.min.css' : 'sass/main.scss'
 				}
 			}
 		},
