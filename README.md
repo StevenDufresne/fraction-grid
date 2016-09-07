@@ -1,6 +1,11 @@
 # fraction-grid
 A more semantic, back-end developer friendly grid leading with the idea that layout and style should read separately.
 
+###Install using npm
+```sh
+npm install fraction-grid
+```
+
 ###The basic elements
 ```sh
 <box>                           // Container
