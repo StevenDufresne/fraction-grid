@@ -12,6 +12,21 @@
 		}
 	}
 }
+@mixin max_stretch($prefix) {
+	@for $i from 1 through 7 {
+	    @for $j from 1 through $i {
+		    $width: percentage($j / $i);
+
+		    #{$wrapper-tag}[#{$prefix}max-stretch="#{$j}/#{$i}"], 
+		    [#{$wrapper-tag}][#{$prefix}max-stretch="#{$j}/#{$i}"],
+		    #{$wrapper-tag} #{$content-tag}[#{$prefix}max-stretch="#{$j}/#{$i}"], 
+		    [#{$wrapper-tag}][#{$content-tag}][#{$prefix}max-stretch="#{$j}/#{$i}"] {
+		     	max-width: $width;
+		     	margin: 0 auto;
+		     }
+		}
+	}
+}
 
 #{$container-tag}, [#{$container-tag}] { display: block; }
 
@@ -37,20 +52,26 @@
 
 // Default Layout
 @include grid("");
+@include max_stretch("");
 
 // Small Grid
 @media (max-width: $small-breakpoint + "px") {
 	@include grid("sm-");
+	@include max_stretch("sm-");
 }
 
 // Medium Grid
 @media (min-width: $small-breakpoint + 1 + "px") and (max-width: $medium-breakpoint + "px") {
 	@include grid("md-");
+	@include max_stretch("md-");
 }
 
 // Large Grid
 @media (min-width: $medium-breakpoint + 1 + "px") {
 	@include grid("lg-");
+	@include max_stretch("lg-");
 }
+
+
 
 

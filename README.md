@@ -96,3 +96,16 @@ npm install fraction-grid
 </div>
 ```
 
+###Control the total width of the container and center it
+```sh
+<!-- Tag -->
+<box>
+    <row lg-max-stretch="3/4">
+        <unit>Unit 1</unit>
+        <unit>Unit 2</unit>
+        <unit>Unit 3</unit>
+    </row>
+</box>
+
+```
+
