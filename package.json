@@ -1,6 +1,6 @@
 {
   "name": "fraction-grid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A more semantic, back-end developer friendly css grid leading with the idea that layout and style should read separately.",
   "main": "index.js",
   "scripts": {
